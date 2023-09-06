@@ -10,7 +10,6 @@ server.register(cors, {
 })
 
 server.get('/users', (request, reply) => {
-  console.log('test')
   const sql = 'SELECT * FROM users'
 
   database.all(sql, [], (err, rows) => {
@@ -35,7 +34,7 @@ server.post('/users', async (request, reply) => {
   reply.status(201).send({ name, email })
 })
 
-server.listen({ port: 4000 }, (err, address) => {
+server.listen({ port: 10000 }, (err, address) => {
   if (err) {
     console.error(err)
     process.exit(1)
