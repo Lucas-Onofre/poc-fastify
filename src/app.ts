@@ -34,7 +34,7 @@ server.post('/users', async (request, reply) => {
   reply.status(201).send({ name, email })
 })
 
-server.listen({ port: 10000 }, (err, address) => {
+server.listen({ path: '0.0.0.0', port: 10000 }, (err, address) => {
   if (err) {
     console.error(err)
     process.exit(1)
